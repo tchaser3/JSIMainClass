@@ -44,6 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FindJSIDocumentationByJSITransactionIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindJSIDocumentationByJSITransactionIDDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindJSILadderInspectionByJSITransactionIDDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -64,10 +69,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindJSIMainByManagerIDDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindJSIOverallByJSITransactionIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindJSIOverallByJSITransactionIDDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindJSIPPEByJSITransactionIDDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FindJSIPPEByJSITransactionIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindJSISiteInspectionByJSITransactionIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindJSISiteInspectionByJSITransactionIDDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="FindJSIUniformByJSITransactionIDDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -89,15 +104,30 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>InsertIntoJSIMainEntry.xsd</DependentUpon>
     </Compile>
+    <Compile Include="InsertJSIDocumentationEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertJSIDocumentationEntry.xsd</DependentUpon>
+    </Compile>
     <Compile Include="InsertJSILadderInspectionEntry.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>InsertJSILadderInspectionEntry.xsd</DependentUpon>
     </Compile>
+    <Compile Include="InsertJSIOverallEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertJSIOverallEntry.xsd</DependentUpon>
+    </Compile>
     <Compile Include="InsertJSIPPEEntry.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>InsertJSIPPEEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertJSISiteInspectionEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertJSISiteInspectionEntry.xsd</DependentUpon>
     </Compile>
     <Compile Include="InsertJSIUniformEntry.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -108,6 +138,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>InsertJSIVehicleEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="JSIDocumentationDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JSIDocumentationDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="JSILadderInspectionDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -120,6 +155,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>JSIMainDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="JSIOverallDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JSIOverallDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="JSIPPEDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -129,6 +169,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>JSIPPEEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="JSISiteInspectionDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JSISiteInspectionDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="JSIUniformDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -149,6 +194,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="FindJSIDocumentationByJSITransactionIDDataSet.xsc">
+      <DependentUpon>FindJSIDocumentationByJSITransactionIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindJSIDocumentationByJSITransactionIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindJSIDocumentationByJSITransactionIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindJSIDocumentationByJSITransactionIDDataSet.xss">
+      <DependentUpon>FindJSIDocumentationByJSITransactionIDDataSet.xsd</DependentUpon>
+    </None>
     <None Include="FindJSILadderInspectionByJSITransactionIDDataSet.xsc">
       <DependentUpon>FindJSILadderInspectionByJSITransactionIDDataSet.xsd</DependentUpon>
     </None>
@@ -193,6 +249,17 @@
     <None Include="FindJSIMainByManagerIDDataSet.xss">
       <DependentUpon>FindJSIMainByManagerIDDataSet.xsd</DependentUpon>
     </None>
+    <None Include="FindJSIOverallByJSITransactionIDDataSet.xsc">
+      <DependentUpon>FindJSIOverallByJSITransactionIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindJSIOverallByJSITransactionIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindJSIOverallByJSITransactionIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindJSIOverallByJSITransactionIDDataSet.xss">
+      <DependentUpon>FindJSIOverallByJSITransactionIDDataSet.xsd</DependentUpon>
+    </None>
     <None Include="FindJSIPPEByJSITransactionIDDataSet.xsc">
       <DependentUpon>FindJSIPPEByJSITransactionIDDataSet.xsd</DependentUpon>
     </None>
@@ -203,6 +270,17 @@
     </None>
     <None Include="FindJSIPPEByJSITransactionIDDataSet.xss">
       <DependentUpon>FindJSIPPEByJSITransactionIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindJSISiteInspectionByJSITransactionIDDataSet.xsc">
+      <DependentUpon>FindJSISiteInspectionByJSITransactionIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindJSISiteInspectionByJSITransactionIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindJSISiteInspectionByJSITransactionIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindJSISiteInspectionByJSITransactionIDDataSet.xss">
+      <DependentUpon>FindJSISiteInspectionByJSITransactionIDDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindJSIUniformByJSITransactionIDDataSet.xsc">
       <DependentUpon>FindJSIUniformByJSITransactionIDDataSet.xsd</DependentUpon>
@@ -248,6 +326,17 @@
     <None Include="InsertIntoJSIMainEntry.xss">
       <DependentUpon>InsertIntoJSIMainEntry.xsd</DependentUpon>
     </None>
+    <None Include="InsertJSIDocumentationEntry.xsc">
+      <DependentUpon>InsertJSIDocumentationEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertJSIDocumentationEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertJSIDocumentationEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertJSIDocumentationEntry.xss">
+      <DependentUpon>InsertJSIDocumentationEntry.xsd</DependentUpon>
+    </None>
     <None Include="InsertJSILadderInspectionEntry.xsc">
       <DependentUpon>InsertJSILadderInspectionEntry.xsd</DependentUpon>
     </None>
@@ -259,6 +348,17 @@
     <None Include="InsertJSILadderInspectionEntry.xss">
       <DependentUpon>InsertJSILadderInspectionEntry.xsd</DependentUpon>
     </None>
+    <None Include="InsertJSIOverallEntry.xsc">
+      <DependentUpon>InsertJSIOverallEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertJSIOverallEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertJSIOverallEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertJSIOverallEntry.xss">
+      <DependentUpon>InsertJSIOverallEntry.xsd</DependentUpon>
+    </None>
     <None Include="InsertJSIPPEEntry.xsc">
       <DependentUpon>InsertJSIPPEEntry.xsd</DependentUpon>
     </None>
@@ -269,6 +369,17 @@
     </None>
     <None Include="InsertJSIPPEEntry.xss">
       <DependentUpon>InsertJSIPPEEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertJSISiteInspectionEntry.xsc">
+      <DependentUpon>InsertJSISiteInspectionEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertJSISiteInspectionEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertJSISiteInspectionEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertJSISiteInspectionEntry.xss">
+      <DependentUpon>InsertJSISiteInspectionEntry.xsd</DependentUpon>
     </None>
     <None Include="InsertJSIUniformEntry.xsc">
       <DependentUpon>InsertJSIUniformEntry.xsd</DependentUpon>
@@ -292,6 +403,17 @@
     <None Include="InsertJSIVehicleEntry.xss">
       <DependentUpon>InsertJSIVehicleEntry.xsd</DependentUpon>
     </None>
+    <None Include="JSIDocumentationDataSet.xsc">
+      <DependentUpon>JSIDocumentationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="JSIDocumentationDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JSIDocumentationDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="JSIDocumentationDataSet.xss">
+      <DependentUpon>JSIDocumentationDataSet.xsd</DependentUpon>
+    </None>
     <None Include="JSILadderInspectionDataSet.xsc">
       <DependentUpon>JSILadderInspectionDataSet.xsd</DependentUpon>
     </None>
@@ -314,6 +436,17 @@
     <None Include="JSIMainDataSet.xss">
       <DependentUpon>JSIMainDataSet.xsd</DependentUpon>
     </None>
+    <None Include="JSIOverallDataSet.xsc">
+      <DependentUpon>JSIOverallDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="JSIOverallDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JSIOverallDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="JSIOverallDataSet.xss">
+      <DependentUpon>JSIOverallDataSet.xsd</DependentUpon>
+    </None>
     <None Include="JSIPPEDataSet.xsc">
       <DependentUpon>JSIPPEDataSet.xsd</DependentUpon>
     </None>
@@ -335,6 +468,17 @@
     </None>
     <None Include="JSIPPEEntry.xss">
       <DependentUpon>JSIPPEEntry.xsd</DependentUpon>
+    </None>
+    <None Include="JSISiteInspectionDataSet.xsc">
+      <DependentUpon>JSISiteInspectionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="JSISiteInspectionDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JSISiteInspectionDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="JSISiteInspectionDataSet.xss">
+      <DependentUpon>JSISiteInspectionDataSet.xsd</DependentUpon>
     </None>
     <None Include="JSIUniformDataSet.xsc">
       <DependentUpon>JSIUniformDataSet.xsd</DependentUpon>
