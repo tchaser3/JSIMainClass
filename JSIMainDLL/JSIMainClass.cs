@@ -91,6 +91,92 @@ namespace JSIMainDLL
         FindJSIDocumentationByJSITransactionIDDataSet aFindJSIDocumentationByJSITransactionIDDataSet;
         FindJSIDocumentationByJSITransactionIDDataSetTableAdapters.FindJSILadderInspectionByJSITransactionIDTableAdapter aFindJSIDocumentationByJSITransactionIDTableAdapter;
 
+        JSIEmployeeDataSet aJSIEmployeeDataSet;
+        JSIEmployeeDataSetTableAdapters.jsiemployeeTableAdapter aJSIEmployeeTableAdapter;
+
+        InsertJSIEmployeeEntryTableAdapters.QueriesTableAdapter aInsertJSIEmployeeTableAdapter;
+
+        FindJSIEmployeeByJSITransactionIDDataSet aFindJSIEmployeeByJSITransactionIDDataSet;
+        FindJSIEmployeeByJSITransactionIDDataSetTableAdapters.FindJSIEmployeeByJSITransactionIDTableAdapter aFindJSIEmployeeByJSITransactionIDTableAdapter;
+
+        FindJSIInspectionsByEmployeeDataSet aFindJSIInspectionsByEmployeeDataSet;
+        FindJSIInspectionsByEmployeeDataSetTableAdapters.FindJSIInspectionsByEmployeeTableAdapter aFindJSIInspectionsByEmployeeTableAdapter;
+
+        public FindJSIInspectionsByEmployeeDataSet FindJSIInspectionsByEmployee(int intEmployeeID, DateTime datStartDate, DateTime datEndDate)
+        {
+            try
+            {
+                aFindJSIInspectionsByEmployeeDataSet = new FindJSIInspectionsByEmployeeDataSet();
+                aFindJSIInspectionsByEmployeeTableAdapter = new FindJSIInspectionsByEmployeeDataSetTableAdapters.FindJSIInspectionsByEmployeeTableAdapter();
+                aFindJSIInspectionsByEmployeeTableAdapter.Fill(aFindJSIInspectionsByEmployeeDataSet.FindJSIInspectionsByEmployee, intEmployeeID, datStartDate, datEndDate);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "JSI Main Class // Find JSI Inspection By Employee " + Ex.Message);
+            }
+
+            return aFindJSIInspectionsByEmployeeDataSet;
+        }
+        public FindJSIEmployeeByJSITransactionIDDataSet FindJSIEmployeeByJSITransactionID(int intJSITransactionID)
+        {
+            try
+            {
+                aFindJSIEmployeeByJSITransactionIDDataSet = new FindJSIEmployeeByJSITransactionIDDataSet();
+                aFindJSIEmployeeByJSITransactionIDTableAdapter = new FindJSIEmployeeByJSITransactionIDDataSetTableAdapters.FindJSIEmployeeByJSITransactionIDTableAdapter();
+                aFindJSIEmployeeByJSITransactionIDTableAdapter.Fill(aFindJSIEmployeeByJSITransactionIDDataSet.FindJSIEmployeeByJSITransactionID, intJSITransactionID);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "JSI Main Class // Find JSI Employee by JSI Transaction ID " + Ex.Message);
+            }
+
+            return aFindJSIEmployeeByJSITransactionIDDataSet;
+        }
+        public bool InsertJSIEmployee(int intJSITransactionID, int intEmployeeID, DateTime datTransactionDate)
+        {
+            bool blnFatalError = false;
+
+            try
+            {
+                aInsertJSIEmployeeTableAdapter = new InsertJSIEmployeeEntryTableAdapters.QueriesTableAdapter();
+                aInsertJSIEmployeeTableAdapter.InsertJSIEmployee(intJSITransactionID, intEmployeeID, datTransactionDate);
+            }
+            catch(Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "JSI Main Class // Insert JSI Employee " + Ex.Message);
+
+                blnFatalError = true;
+            }
+
+            return blnFatalError;
+        }
+        public JSIEmployeeDataSet GetJSIEmployeeInfo()
+        {
+            try
+            {
+                aJSIEmployeeDataSet = new JSIEmployeeDataSet();
+                aJSIEmployeeTableAdapter = new JSIEmployeeDataSetTableAdapters.jsiemployeeTableAdapter();
+                aJSIEmployeeTableAdapter.Fill(aJSIEmployeeDataSet.jsiemployee);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "JSI Main Class // Get JSI Employee Info " + Ex.Message);
+            }
+
+            return aJSIEmployeeDataSet;
+        }
+        public void UpdateJSIEmployeeDB(JSIEmployeeDataSet aJSIEmployeeDataSet)
+        {
+            try
+            {
+                aJSIEmployeeTableAdapter = new JSIEmployeeDataSetTableAdapters.jsiemployeeTableAdapter();
+                aJSIEmployeeTableAdapter.Update(aJSIEmployeeDataSet.jsiemployee);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "JSI Main Class // Update JSI Employee DB " + Ex.Message);
+            }
+        }
         public FindJSIDocumentationByJSITransactionIDDataSet FindJSIDocumenationByJSITransactionID(int intJSITransactionID)
         {
             try
