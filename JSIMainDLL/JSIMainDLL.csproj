@@ -69,6 +69,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindJSIMainByAssignedProjectIDDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindJSIMainByDateMatchDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindJSIMainByDateMatchDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindJSIMainByDateRangeDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -268,6 +273,17 @@
     </None>
     <None Include="FindJSIMainByAssignedProjectIDDataSet.xss">
       <DependentUpon>FindJSIMainByAssignedProjectIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindJSIMainByDateMatchDataSet.xsc">
+      <DependentUpon>FindJSIMainByDateMatchDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindJSIMainByDateMatchDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindJSIMainByDateMatchDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindJSIMainByDateMatchDataSet.xss">
+      <DependentUpon>FindJSIMainByDateMatchDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindJSIMainByDateRangeDataSet.xsc">
       <DependentUpon>FindJSIMainByDateRangeDataSet.xsd</DependentUpon>

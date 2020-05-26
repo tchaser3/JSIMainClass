@@ -102,6 +102,24 @@ namespace JSIMainDLL
         FindJSIInspectionsByEmployeeDataSet aFindJSIInspectionsByEmployeeDataSet;
         FindJSIInspectionsByEmployeeDataSetTableAdapters.FindJSIInspectionsByEmployeeTableAdapter aFindJSIInspectionsByEmployeeTableAdapter;
 
+        FindJSIMainByDateMatchDataSet aFindJSIMainByDateMatchDataSet;
+        FindJSIMainByDateMatchDataSetTableAdapters.FindJSIMainByDateMatchTableAdapter aFindJSIMainByDateMatchTableAdapter;
+
+        public FindJSIMainByDateMatchDataSet FindJSIMainByDateMatch(DateTime datTransactionDate)
+        {
+            try
+            {
+                aFindJSIMainByDateMatchDataSet = new FindJSIMainByDateMatchDataSet();
+                aFindJSIMainByDateMatchTableAdapter = new FindJSIMainByDateMatchDataSetTableAdapters.FindJSIMainByDateMatchTableAdapter();
+                aFindJSIMainByDateMatchTableAdapter.Fill(aFindJSIMainByDateMatchDataSet.FindJSIMainByDateMatch, datTransactionDate);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "JSI Main Class // Find JSI Main By Date Match " + Ex.Message);
+            }
+
+            return aFindJSIMainByDateMatchDataSet;
+        }
         public FindJSIInspectionsByEmployeeDataSet FindJSIInspectionsByEmployee(int intEmployeeID, DateTime datStartDate, DateTime datEndDate)
         {
             try
