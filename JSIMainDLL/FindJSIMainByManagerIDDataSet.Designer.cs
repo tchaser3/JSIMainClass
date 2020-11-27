@@ -287,6 +287,8 @@ namespace JSIMainDLL {
             
             private global::System.Data.DataColumn columnProjectID;
             
+            private global::System.Data.DataColumn columnCustomerAssignedID;
+            
             private global::System.Data.DataColumn columnAssignedProjectID;
             
             private global::System.Data.DataColumn columnProjectName;
@@ -367,6 +369,14 @@ namespace JSIMainDLL {
             public global::System.Data.DataColumn ProjectIDColumn {
                 get {
                     return this.columnProjectID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CustomerAssignedIDColumn {
+                get {
+                    return this.columnCustomerAssignedID;
                 }
             }
             
@@ -479,13 +489,14 @@ namespace JSIMainDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindJSIMainByManagerIDRow AddFindJSIMainByManagerIDRow(System.DateTime TransactionDate, System.DateTime InspectionDate, int ProjectID, string AssignedProjectID, string ProjectName, string FirstName, string LastName, string HomeOffice, string VehicleNumber, string Department, int DataEntryEmployeeID, int DataEntryEmployeeID1) {
+            public FindJSIMainByManagerIDRow AddFindJSIMainByManagerIDRow(System.DateTime TransactionDate, System.DateTime InspectionDate, int ProjectID, string CustomerAssignedID, string AssignedProjectID, string ProjectName, string FirstName, string LastName, string HomeOffice, string VehicleNumber, string Department, int DataEntryEmployeeID, int DataEntryEmployeeID1) {
                 FindJSIMainByManagerIDRow rowFindJSIMainByManagerIDRow = ((FindJSIMainByManagerIDRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         TransactionDate,
                         InspectionDate,
                         ProjectID,
+                        CustomerAssignedID,
                         AssignedProjectID,
                         ProjectName,
                         FirstName,
@@ -528,6 +539,7 @@ namespace JSIMainDLL {
                 this.columnTransactionDate = base.Columns["TransactionDate"];
                 this.columnInspectionDate = base.Columns["InspectionDate"];
                 this.columnProjectID = base.Columns["ProjectID"];
+                this.columnCustomerAssignedID = base.Columns["CustomerAssignedID"];
                 this.columnAssignedProjectID = base.Columns["AssignedProjectID"];
                 this.columnProjectName = base.Columns["ProjectName"];
                 this.columnFirstName = base.Columns["FirstName"];
@@ -550,6 +562,8 @@ namespace JSIMainDLL {
                 base.Columns.Add(this.columnInspectionDate);
                 this.columnProjectID = new global::System.Data.DataColumn("ProjectID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnProjectID);
+                this.columnCustomerAssignedID = new global::System.Data.DataColumn("CustomerAssignedID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCustomerAssignedID);
                 this.columnAssignedProjectID = new global::System.Data.DataColumn("AssignedProjectID", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAssignedProjectID);
                 this.columnProjectName = new global::System.Data.DataColumn("ProjectName", typeof(string), null, global::System.Data.MappingType.Element);
@@ -577,6 +591,8 @@ namespace JSIMainDLL {
                 this.columnTransactionDate.AllowDBNull = false;
                 this.columnInspectionDate.AllowDBNull = false;
                 this.columnProjectID.AllowDBNull = false;
+                this.columnCustomerAssignedID.AllowDBNull = false;
+                this.columnCustomerAssignedID.MaxLength = 2147483647;
                 this.columnAssignedProjectID.AllowDBNull = false;
                 this.columnAssignedProjectID.MaxLength = 2147483647;
                 this.columnProjectName.AllowDBNull = false;
@@ -774,6 +790,17 @@ namespace JSIMainDLL {
                 }
                 set {
                     this[this.tableFindJSIMainByManagerID.ProjectIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string CustomerAssignedID {
+                get {
+                    return ((string)(this[this.tableFindJSIMainByManagerID.CustomerAssignedIDColumn]));
+                }
+                set {
+                    this[this.tableFindJSIMainByManagerID.CustomerAssignedIDColumn] = value;
                 }
             }
             
@@ -1040,6 +1067,7 @@ namespace JSIMainDLL.FindJSIMainByManagerIDDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("TransactionDate", "TransactionDate");
             tableMapping.ColumnMappings.Add("InspectionDate", "InspectionDate");
             tableMapping.ColumnMappings.Add("ProjectID", "ProjectID");
+            tableMapping.ColumnMappings.Add("CustomerAssignedID", "CustomerAssignedID");
             tableMapping.ColumnMappings.Add("AssignedProjectID", "AssignedProjectID");
             tableMapping.ColumnMappings.Add("ProjectName", "ProjectName");
             tableMapping.ColumnMappings.Add("FirstName", "FirstName");

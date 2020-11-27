@@ -25,6 +25,7 @@
             <Mappings>
               <Mapping SourceColumn="JSITransactionID" DataSetColumn="JSITransactionID" />
               <Mapping SourceColumn="TransactionDate" DataSetColumn="TransactionDate" />
+              <Mapping SourceColumn="CustomerAssignedID" DataSetColumn="CustomerAssignedID" />
               <Mapping SourceColumn="AssignedProjectID" DataSetColumn="AssignedProjectID" />
               <Mapping SourceColumn="ProjectName" DataSetColumn="ProjectName" />
               <Mapping SourceColumn="FirstName" DataSetColumn="FirstName" />
@@ -51,6 +52,13 @@
             <xs:sequence>
               <xs:element name="JSITransactionID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnJSITransactionID" msprop:Generator_ColumnPropNameInRow="JSITransactionID" msprop:Generator_ColumnPropNameInTable="JSITransactionIDColumn" msprop:Generator_UserColumnName="JSITransactionID" type="xs:int" />
               <xs:element name="TransactionDate" msprop:Generator_ColumnVarNameInTable="columnTransactionDate" msprop:Generator_ColumnPropNameInRow="TransactionDate" msprop:Generator_ColumnPropNameInTable="TransactionDateColumn" msprop:Generator_UserColumnName="TransactionDate" type="xs:dateTime" />
+              <xs:element name="CustomerAssignedID" msprop:Generator_ColumnVarNameInTable="columnCustomerAssignedID" msprop:Generator_ColumnPropNameInRow="CustomerAssignedID" msprop:Generator_ColumnPropNameInTable="CustomerAssignedIDColumn" msprop:Generator_UserColumnName="CustomerAssignedID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
               <xs:element name="AssignedProjectID" msprop:Generator_ColumnVarNameInTable="columnAssignedProjectID" msprop:Generator_ColumnPropNameInRow="AssignedProjectID" msprop:Generator_ColumnPropNameInTable="AssignedProjectIDColumn" msprop:Generator_UserColumnName="AssignedProjectID">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">

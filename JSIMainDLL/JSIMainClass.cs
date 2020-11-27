@@ -660,13 +660,13 @@ namespace JSIMainDLL
 
             return aFindJSIMainByManagerIDDataSet;
         }
-        public FindJSIMainByAssignedProjectIDDataSet FindJSIMainByAssignedProjectID(string strAssignedProjectID)
+        public FindJSIMainByAssignedProjectIDDataSet FindJSIMainByAssignedProjectID(int intProjectID)
         {
             try
             {
                 aFindJSIMainByAssignedProjectIDDataSet = new FindJSIMainByAssignedProjectIDDataSet();
                 aFindJSIMainByAssignedProjectIDTableAdapter = new FindJSIMainByAssignedProjectIDDataSetTableAdapters.FindJSIMainByAssignedProjectIDTableAdapter();
-                aFindJSIMainByAssignedProjectIDTableAdapter.Fill(aFindJSIMainByAssignedProjectIDDataSet.FindJSIMainByAssignedProjectID, strAssignedProjectID);
+                aFindJSIMainByAssignedProjectIDTableAdapter.Fill(aFindJSIMainByAssignedProjectIDDataSet.FindJSIMainByAssignedProjectID, intProjectID);
             }
             catch (Exception Ex)
             {
